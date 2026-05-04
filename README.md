@@ -1,8 +1,44 @@
 # 안녕하세요 👋
 
-**프론트엔드 개발자** | 8년차
+**Frontend Engineer** · 8년차 · *Canvas & 시각화 도메인*
 
-성능 최적화와 개발자 경험(DX)에 관심이 많습니다.
+> *손에 잡히지 않는 요구를 만질 수 있는 도구로 만들어내는 일* 을 좋아합니다.
+
+---
+
+## About
+
+- 🎨 **Canvas 기반 편집·시각화 도구** 영역에서 깊이를 쌓아왔습니다.
+- 🔬 **측정 기반 의사결정** 이 일하는 방식의 기본입니다. 추측 대신 정량 지표로 검증합니다.
+- 🤝 **사용자와 직접 소통** 하면서 도구의 본질을 분해해 푸는 방식을 좋아합니다.
+- 🧰 도구를 만들다 보면 **라이브러리·플랫폼화** 까지 끌고 가는 흐름을 즐깁니다.
+
+---
+
+## 대표 작업
+
+### Canvas 기반 이미지 라벨링 편집기
+
+"포토샵 같은 UI" 라는 모호한 요구를 도구의 본질(브러시·매직 원드 등)로 분해해 fabric.js + 직접 구현으로 풀어낸 라벨링 편집기. 외부 전시회 부스에서 가장 이목을 끈 기능이 됐고, **단독 구매 문의** 까지 받으며 자연스럽게 라이브러리 패키지로 분리됐습니다.
+
+🛠️ [ez-planet-demo](https://github.com/servantcdh/ez-planet-demo) — Canvas 기반 편집 데모
+
+### 인터랙션 성능 개선
+
+| 영역 | Rendering | Scripting | Painting | INP |
+| --- | --- | --- | --- | --- |
+| Zoom (1000% 배율) | **-96%** | -79% | -96% | -56% |
+| Superpixel Drag Segmentation | -96% | **-67%** | -93% | -18% |
+
+측정 → 진단 → 교체 → 재측정 사이클로 정량 검증. 데스크탑뿐 아니라 **저성능 모바일 프로파일** 까지 함께 통과시키는 보수적 검증 방식을 일상 습관으로 두고 있습니다.
+
+📄 [Portfolio — 성능 개선기](https://scrawny-holiday-39e.notion.site/Portfolio-2fb3c75a2ec780d0bae6f1b7cc847dd7)
+
+### 대용량 리스트·상태 설계
+
+- TanStack Virtual 활용 **50,000+ 건 가상화**, 메인 스레드 양보로 입력 반응성 유지
+- Operation 모델 (`kind` × `phase`) 추상화로 되돌리기·중단·실패 복원을 단일 상태 머신으로 표현
+- React Query + Zustand 조합으로 서버 상태와 UI 상태를 단일 책임 분리
 
 ---
 
@@ -14,65 +50,50 @@
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![Zustand](https://img.shields.io/badge/Zustand-433E38?style=flat-square&logo=react&logoColor=white)
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=flat-square&logo=reactquery&logoColor=white)
+
+**Visualization**  
+![Canvas API](https://img.shields.io/badge/Canvas_API-E34F26?style=flat-square&logo=html5&logoColor=white)
+![Fabric.js](https://img.shields.io/badge/Fabric.js-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
 **Testing & Docs**  
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
 ![Testing Library](https://img.shields.io/badge/Testing_Library-E33332?style=flat-square&logo=testinglibrary&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 ![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=flat-square&logo=storybook&logoColor=white)
 
-**Backend**  
+**Backend & Infra**  
 ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-
-**DevOps & Tools**  
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+
+**Build & Tooling**  
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white)
 
 ---
 
-## 성능 최적화 경험
+## 일하는 방식
 
-**웹 기반 도구 개발**
-
-- Canvas API 기반 이미지 편집 도구 구현
-- Zoom 인터랙션 최적화 (Rendering 96% 감소)
-- Superpixel Drag Segmentation 최적화 (Scripting 67% 감소)
-- requestAnimationFrame 기반 고성능 렌더링 파이프라인
-
-📄 [Portfolio](https://scrawny-holiday-39e.notion.site/Portfolio-2fb3c75a2ec780d0bae6f1b7cc847dd7)
-
-**대용량 데이터 처리**
-
-- TanStack Virtual을 활용한 50,000건+ 리스트 가상화
-- Infinite Query로 점진적 데이터 페칭
-- React Query 캐싱 전략 설계
-
-**렌더링 최적화**
-
-- 상태 분리와 메모이제이션을 통한 불필요한 리렌더링 방지
-- URL 파라미터 동기화로 상태 복원 가능한 UI 구현
-- Web Vitals 지표 모니터링 및 INP 최적화
-
-**번들 최적화**
-
-- 코드 스플리팅과 Lazy Loading으로 초기 로딩 시간 단축
-- Tree Shaking 및 번들 사이즈 분석을 통한 최적화
+- **측정 먼저, 최적화 나중** — Chrome DevTools Performance 패널 4축(Scripting / Rendering / Painting / INP) + 저성능 프로파일까지 함께 검증
+- **테스트는 회귀가 치명적인 지점에 집중** — 커버리지 100% 가 목표가 아닙니다. *왜 제외했는지* 를 명시하는 쪽이 시니어다운 테스트 감각이라고 봅니다
+- **상태 머신으로 추상화** — 사용자 의도와 부수 효과 사이의 시간 간격(되돌리기·중단·확정)을 두 축(`kind` × `phase`)으로 모델링
+- **모호한 요구는 본질로 분해** — "포토샵 같은 UI" 가 아니라 "사용자가 픽셀 위에서 의도를 표현하는 행동" 으로 읽고, 검증 가능한 가설로 바꿉니다
+- **AI 도구는 분담으로** — 판단·결정·검증은 사람이, 정리·반복·구현 확장은 AI 가. 어떻게 나눠 썼는지를 산출물에 명시합니다
 
 ---
 
 ## 엔지니어링 역량
 
-- **아키텍처 설계**: pnpm 모노레포 기반 프론트엔드/백엔드 통합 구조 설계
-- **Design System**: Atomic Design 패턴 기반 UI 라이브러리 구축 및 Storybook 문서화, npm 배포
-- **테스트**: Vitest + Testing Library 기반 컴포넌트/통합 테스트, Storybook Interaction Test
-- **접근성**: 시맨틱 마크업, 키보드 네비게이션, ARIA 속성 적용
-- **오프라인 우선**: IndexedDB Outbox Pattern으로 네트워크 단절 대응
-- **API 설계**: REST API 명세서 작성, Idempotent 설계, N+1 쿼리 해결
+- **아키텍처 설계** — pnpm 모노레포 기반 FE/BE 통합 구조, 라이브러리 단위 분리
+- **Design System** — Atomic Design + Storybook 문서화 + npm 배포까지 운영
+- **테스트** — Vitest · Testing Library · Playwright · Storybook Interaction Test 조합
+- **접근성** — 시맨틱 마크업, 키보드 네비게이션, ARIA, motion-safe 미디어 쿼리
+- **오프라인 우선** — IndexedDB Outbox Pattern 으로 네트워크 단절 대응
+- **API 설계** — REST 명세 작성, Idempotent 설계, N+1 쿼리 해결
 
 ---
 
-<sub>_Generated by AI, Architected by Human_ 🤖</sub>
+<sub>*Generated by AI, Architected by Human* 🤖</sub>
